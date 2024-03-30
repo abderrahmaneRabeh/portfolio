@@ -1,0 +1,125 @@
+header.flex {
+  margin-top: 1.2rem;
+  justify-content: space-between;
+  padding: 0 2.4rem;
+}
+header ul.flex {
+  gap: 16px;
+}
+header ul li a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+header ul li a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 0.9rem;
+}
+
+header button {
+  font-size: 1.2rem;
+}
+
+header.flex nav {
+  background-color: var(--bgHeader);
+  padding: 0.7rem 1.6rem;
+  border-radius: 52px;
+  box-shadow: 0px 1px 10px 1px rgb(68 65 65);
+}
+
+header button.menu {
+  display: none;
+}
+
+header .fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 11;
+  background-color: rgba(58, 54, 48, 0.909);
+  /* filter: blur(8px); */
+  backdrop-filter: blur(4px);
+}
+
+@keyframes modelAnimation {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+header .fixed ul.model {
+  animation: modelAnimation 1s;
+  width: 75%;
+  margin: 2rem auto 0 auto;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
+}
+
+header .fixed ul.model li {
+  border-bottom: 1px solid var(--border);
+  padding: 0.6rem 0;
+}
+
+header .fixed ul.model li:last-child {
+  border-bottom: none;
+}
+header .fixed ul.model li:first-child {
+  text-align: right;
+  border-bottom: none;
+  padding: 0.2rem 0 0 0;
+  margin-bottom: -1rem;
+}
+
+header .fixed ul.model li a {
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  header.flex nav {
+    display: none;
+  }
+
+  header button.menu {
+    display: block;
+  }
+}
+
+/* icons */
+
+header button.icon-menu,button.icon-moon,button.icon-sun{
+  background-color: var(--bgHeader);
+  height: 2.4rem;
+  width: 2.4rem;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--subtitle);
+  border: 1px solid rgba(73, 143, 255, 0.323);
+}
+
+header button.icon-menu:hover,button.icon-moon:hover,button.icon-sun:hover{
+  color: var(--title);
+  border: 1px solid rgba(73, 143, 255, 0.764);
+  transition: 0.2s;
+}
+
+header .icon-sun{
+  color: rgb(255, 165, 0);
+}
+
+header .icon-remove{
+  font-size: 1.3rem;
+  color: var(--subtitle);
+  transition:0.3s;
+}
+header .icon-remove:hover{
+  font-size: 1.4rem;
+  color: crimson;
+  rotate: 180deg;
+}
